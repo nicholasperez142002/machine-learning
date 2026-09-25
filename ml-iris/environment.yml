@@ -1,0 +1,11 @@
+name: ml-iris
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  - ipykernel
+  - pandas
+  - numpy
+  - seaborn
+  - matplotlib
+  - scikit-learn
