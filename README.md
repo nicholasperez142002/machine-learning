@@ -1,18 +1,25 @@
-﻿# Machine Learning Practice
+﻿## Projects
 
-Hands-on machine learning practice, starting with the classic Iris dataset and expanding from there.
-
-## Projects
-- Iris Classification - exploratory data analysis and classification models on the Iris dataset.
+- **Iris Classification** – exploratory data analysis and classification models on the Iris dataset.
+- **California Housing** – regression models predicting median house values from California census data.
 
 ## Setup
-1. Create a virtual environment (conda or venv)
-2. Activate it
-3. Install dependencies: pip install -r requirements.txt
 
-## Structure
-- notebooks/ - Jupyter notebooks for each project
-- scripts/ - reusable helper functions imported into notebooks
-- data/raw/ - original, unmodified datasets
-- data/processed/ - cleaned/transformed data
-- models/ - saved trained model files
+Each project has its own conda environment, defined in its `environment.yml`.
+
+1. Install [Miniconda](https://docs.conda.io/en/latest/miniconda.html).
+2. Create the environment for the project you want to run:
+```
+   conda env create -f ml-iris/environment.yml
+   conda env create -f california-housing-ml/environment.yml
+```
+3. Activate it:
+```
+   conda activate ml-iris
+```
+4. Open the project's notebook in VS Code or Jupyter and select the matching kernel.
+
+To update an environment after changing its `environment.yml`:
+```
+conda env update -f <project>/environment.yml --prune
+```
